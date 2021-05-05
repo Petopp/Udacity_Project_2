@@ -84,10 +84,21 @@ Here is the status that the model now has
 
 ## 3. Enable logging
 
-This step shows that Application Insights is enabled.
+Now we activate the Application Insights over the logs.py programm. Here can we see the results of this
+
+in the Python Shell
+
+![image](https://user-images.githubusercontent.com/41972011/117184945-97219100-add9-11eb-98d7-686dfef9ce21.png)
+
+and in Azure
+
+![image](https://user-images.githubusercontent.com/41972011/117184987-a4d71680-add9-11eb-9a43-eb98ad07d1bf.png)
 
 
-Screenshot from logs.py:
+
+
+
+
 
 
 ## 4. Swagger & endpoint consumption 
