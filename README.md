@@ -116,50 +116,40 @@ and here is a example for communication with the model
 ![image](https://user-images.githubusercontent.com/41972011/117185603-4e1e0c80-adda-11eb-9336-82695084f1fe.png)
 
 
-## 5. Publish the Pipeline
+## 5. Overview over the Pipeline (it's more FYI)
 
 Pipelines - general view
 
-![image](https://user-images.githubusercontent.com/81966908/116793319-6cc49080-aac6-11eb-98dc-4f21cea7c583.png)
+![image](https://user-images.githubusercontent.com/41972011/117185933-a6eda500-adda-11eb-9ff2-44cab633334b.png)
 
 
 Pipeline - Endpoints 
 
-![image](https://user-images.githubusercontent.com/81966908/116793390-d2b11800-aac6-11eb-8e85-f34aca41da39.png)
+![image](https://user-images.githubusercontent.com/41972011/117185954-abb25900-adda-11eb-8f2e-02f3ad3a339e.png)
+
 
 Pipeline - REST-endpoint
-![image](https://user-images.githubusercontent.com/81966908/117018550-e215a880-acf4-11eb-85b4-0c75c23f985d.png)
-
-Pipleine - Completet status of Pipeline
-![image](https://user-images.githubusercontent.com/81966908/117018656-ffe30d80-acf4-11eb-959a-66b70b1d1758.png)
+![image](https://user-images.githubusercontent.com/41972011/117186105-ce447200-adda-11eb-98e1-0151833e9016.png)
 
 
-Pipelines - overview showing:
-  - general info
-  - REST-Endpoint
-  - interaction AutoML and dataset
+## 6. Runnig the SDK over Jupyter
 
-![image](https://user-images.githubusercontent.com/81966908/116793490-523ee700-aac7-11eb-87f4-addd81fdf7f5.png)
+After upload the Jupyter programm in to Azure, can you find this on this file here:
+![image](https://user-images.githubusercontent.com/41972011/117186452-211e2980-addb-11eb-8d9b-70fdcc6ddcea.png)
 
-Screenshot of RunDetails widgets
 
-![image](https://user-images.githubusercontent.com/81966908/116887413-926aaa80-ac2a-11eb-9646-41b43f6b3838.png)
+Running the experiment over SDK
+![image](https://user-images.githubusercontent.com/41972011/117186950-aefa1480-addb-11eb-83bb-5c433f518c36.png)
 
-Jupyter - published pipline
+![image](https://user-images.githubusercontent.com/41972011/117186816-8114d000-addb-11eb-9376-a10f3d58ce2c.png)
 
-![image](https://user-images.githubusercontent.com/81966908/116887637-cfcf3800-ac2a-11eb-8863-35311a096bb3.png)
+![image](https://user-images.githubusercontent.com/41972011/117186860-8eca5580-addb-11eb-9525-178cfedf2ae9.png)
 
-Jupyter - Pipelineendpoint test succesfull
-
-![image](https://user-images.githubusercontent.com/81966908/117019360-9fa09b80-acf5-11eb-9ef5-1f08ccb15f2d.png)
-
-testing endpoint with pyhton endpoint.py file -> successfull
-![image](https://user-images.githubusercontent.com/81966908/117020109-6b79aa80-acf6-11eb-851b-de4a2f62360b.png)
+Message that it is finished
+![image](https://user-images.githubusercontent.com/41972011/117186616-4dd24100-addb-11eb-9ddc-507a517c2f1e.png)
 
 
 
-Jupyter - Modeldetails
-![image](https://user-images.githubusercontent.com/81966908/116888138-656ac780-ac2b-11eb-9023-58b0d7b582a8.png)
 
 
 
