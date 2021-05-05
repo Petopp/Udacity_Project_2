@@ -26,24 +26,38 @@ In this project we focused more to the Endpoints and SDK in Azure Machine Learni
 
 ## Key Steps
 
-## 1. AutoML - setup: 
-This Step includes importing the dataset, defining a computecluser and triggering the experiment.
+## 1. Loading the CSV to the Dataset
+The download path was communicated at the beginning of the project. 
+This was then downloaded and imported into the dataset. The steps are identical to those carried out in project 1.
 
-![image](https://user-images.githubusercontent.com/81966908/116792794-3afdfa80-aac3-11eb-92d0-a85103e13ef7.png)
-![image](https://user-images.githubusercontent.com/81966908/116792811-51a45180-aac3-11eb-8ed2-caea1e8a214a.png)
-![image](https://user-images.githubusercontent.com/81966908/116792821-5963f600-aac3-11eb-93d0-3485a9b7568a.png)
+Here can you see, the result of loading the files in the Dataset
+
+![image](https://user-images.githubusercontent.com/41972011/117182580-cda9dc80-add6-11eb-8bdf-2fcfd5796c82.png)
+
+and here can you see the confirmation from Azure
+
+![image](https://user-images.githubusercontent.com/41972011/117182190-583e0c00-add6-11eb-975c-916fdc64ff29.png)
+
+
+
+## 2. AutoML - setup: 
+In the next steps we are defining the compute cluster and starting the experiment
+
+
+![image](https://user-images.githubusercontent.com/41972011/117183622-0a2a0800-add8-11eb-9ac9-b18e25772d81.png)
+
+![image](https://user-images.githubusercontent.com/41972011/117182858-2a0cfc00-add7-11eb-979c-849eb47e147a.png)
 
 AUTOML-experiment is completed:
 
-![image](https://user-images.githubusercontent.com/81966908/116792824-5e28aa00-aac3-11eb-944f-ffcf94654270.png)
-![image](https://user-images.githubusercontent.com/81966908/116793430-0429e380-aac7-11eb-830b-4794370e8a7a.png)
-![image](https://user-images.githubusercontent.com/81966908/116792886-c11a4100-aac3-11eb-8903-4bb46d6e7e34.png)
+![image](https://user-images.githubusercontent.com/41972011/117183691-2037c880-add8-11eb-8a99-654dd12624e5.png)
+
+
+
+
 
 
 Best model is VotingEnsemble with Accuracy of 0.91897
-
-![image](https://user-images.githubusercontent.com/81966908/116792917-e4dd8700-aac3-11eb-8be0-3b87ce0a5813.png)
-![image](https://user-images.githubusercontent.com/81966908/116792930-fc1c7480-aac3-11eb-8664-a98d32554f43.png)
 
 
 ## 2. Deployment of best model
@@ -51,29 +65,22 @@ Best model is VotingEnsemble with Accuracy of 0.91897
 In the pictures below, we see that we have delpoyed the best model chosen from AutoML and enabled the following:
 - REST endpoint with Key-based authentification
 
-![image](https://user-images.githubusercontent.com/81966908/116793007-764cf900-aac4-11eb-8cbe-49c0dcc153ba.png)
 
 
 ## 3. Enable logging
 
 This step shows that Application Insights is enabled.
 
-![image](https://user-images.githubusercontent.com/81966908/116793007-764cf900-aac4-11eb-8cbe-49c0dcc153ba.png)
-
 
 Screenshot from logs.py:
 
-![image](https://user-images.githubusercontent.com/81966908/116885704-78c86380-ac28-11eb-8e6e-253337a499bc.png)
 
 ## 4. Swagger & endpoint consumption 
 
 Furthermore, we have also testet the API with swagger using sample data. Swagger is a very handy too, in oder to easily test REST-APIs. Azure provides a swagger.json file to easly test the deployed models-API.
-![image](https://user-images.githubusercontent.com/81966908/116793118-07bc6b00-aac5-11eb-9ec3-5e303e7c443d.png)
-![image](https://user-images.githubusercontent.com/81966908/116793152-39cdcd00-aac5-11eb-9eca-8c160ac69979.png)
 
 In addition to that, we have also testet the endpoint by running the endpoint.py Python-file. The result of the test can be seen as the output of the Python-Script below:
 
-![image](https://user-images.githubusercontent.com/81966908/116793248-f2940c00-aac5-11eb-9e97-ba0d611813f4.png)
 
 ## 5. Publish the Pipeline
 
