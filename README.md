@@ -10,7 +10,7 @@ In this project we focused more to the Endpoints and SDK in Azure Machine Learni
 
 2.  Uploaded this file to Azure Machine Learning in to a dataset. 
 
-2a. In the AutoML functionality, we have defined that the problem we want to tackle is a classification. We have also defined that the variable y (which refers to the decision     whether a customer is eligible or not) is our target variable (binary variable).
+    -In the AutoML functionality, we have defined that the problem we want to tackle is a classification. We have also defined that the variable y (which refers to the decision      whether a customer is eligible or not) is our target variable (binary variable).
 
 3.  Then a compute-cluster was generated ("Standard-DS12_v2").
 
