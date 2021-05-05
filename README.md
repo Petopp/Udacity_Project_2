@@ -1,21 +1,28 @@
 
-# Udacity Machinelearning ND with Azure Project 2
+# Udacity Machinelearning Project 2 for Machine Learning Engineer with Microsoft Azure.
+
+In this project we focused more to the Endpoints and SDK in Azure Machine Learning. To do this, we used the MS Azure Machine Learning Studio to run a AutoML-algorithm, which fits to the already used Bank Marketing Dataset from Project 1. Furthermore, we made it ready for production and deployed it using ACI (Azure Container Instance). The trained model is consumend via REST-API (http-request). Also a pipline was build and consumed.
 
 
-In this project we focused on MLops in Azure MachineLearning. To do this, we used the Azure MachineLearning Studio to run a AutoML-algorithm, which fits to the already used Bank Marketing Dataset from Project1. Furthermore, we made it ready for production and deployed it using ACI (Azure Container Instance). The trained model is consumend via REST-API (http-request). Also a pipline was build and consumed.
+## Summary of the procedure
 
-![image](https://user-images.githubusercontent.com/81966908/116793771-14db5900-aac9-11eb-9735-4837faea1a68.png)
+1.  Download the CSV file of Bank Marketing Data. (You can find the file in this project folder)
+
+2.  Uploaded this file to Azure Machine Learning in to a dataset. 
+
+2a. In the AutoML functionality, we have defined that the problem we want to tackle is a classification. We have also defined that the variable y (which refers to the decision     whether a customer is eligible or not) is our target variable (binary variable).
+
+3.  Then a compute-cluster was generated ("Standard-DS12_v2").
+
+4.  Through Azure Auto ML functionality, we found the best model and deployed it with ACI (the algorithm with the name "voting ensemble" was the best in this test)
+
+5.  Logging and Appplication Insights have been enabled to provide information about the requirements and performance related to the model in use.
+
+6.  The Rest endpoint was testet for connectivity (over Swagger)
+
+7.  Finally step, we used the python SDK to generate a pipleine and published it.
 
 
-## Architectural Diagram
-
-1. The dataset of Bank Marketing Data was downloaded.
-2. Then the dataset was uploaded to Azure MachineLearning Studio. Within the AutoML-functionality, it was defined, that the problem we want to tackle is about Classification. Moreover, we also specified that the variable y (which referst to the decision of a customer is eligible or not) is our target variable (binary-variable), which we want to explain.  
-3. Then a compute-cluster was generated ("Standard-DS12_v2").
-4. By using the AzureAutoML functionality, we found the best model and deployed it using ACI
-5. Also, logging and Appplication Insights was enabled, to get infromation about reuqests and performace concerning the deployed model
-6. The Rest endpoint was testet for connectivity
-7. Finally, we used the python SDK to generate a pipleine and published it.
 
 ## Key Steps
 
