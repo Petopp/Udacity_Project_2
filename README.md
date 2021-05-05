@@ -1,20 +1,126 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
+
+# Udacity Machinelearning ND with Azure Project 2
 
 
-# Your Project Title Here
+In this project we focused on MLops in Azure MachineLearning. To do this, we used the Azure MachineLearning Studio to run a AutoML-algorithm, which fits to the already used Bank Marketing Dataset from Project1. Furthermore, we made it ready for production and deployed it using ACI (Azure Container Instance). The trained model is consumend via REST-API (http-request). Also a pipline was build and consumed.
 
-*TODO:* Write an overview to your project.
+![image](https://user-images.githubusercontent.com/81966908/116793771-14db5900-aac9-11eb-9735-4837faea1a68.png)
+
 
 ## Architectural Diagram
-*TODO*: Provide an architectual diagram of the project and give an introduction of each step.
+
+1. The dataset of Bank Marketing Data was downloaded.
+2. Then the dataset was uploaded to Azure MachineLearning Studio. Within the AutoML-functionality, it was defined, that the problem we want to tackle is about Classification. Moreover, we also specified that the variable y (which referst to the decision of a customer is eligible or not) is our target variable (binary-variable), which we want to explain.  
+3. Then a compute-cluster was generated ("Standard-DS12_v2").
+4. By using the AzureAutoML functionality, we found the best model and deployed it using ACI
+5. Also, logging and Appplication Insights was enabled, to get infromation about reuqests and performace concerning the deployed model
+6. The Rest endpoint was testet for connectivity
+7. Finally, we used the python SDK to generate a pipleine and published it.
 
 ## Key Steps
-*TODO*: Write a short discription of the key steps. Remeber to include all the screencasts required to demonstrate key steps. 
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+## 1. AutoML - setup: 
+This Step includes importing the dataset, defining a computecluser and triggering the experiment.
+
+![image](https://user-images.githubusercontent.com/81966908/116792794-3afdfa80-aac3-11eb-92d0-a85103e13ef7.png)
+![image](https://user-images.githubusercontent.com/81966908/116792811-51a45180-aac3-11eb-8ed2-caea1e8a214a.png)
+![image](https://user-images.githubusercontent.com/81966908/116792821-5963f600-aac3-11eb-93d0-3485a9b7568a.png)
+
+AUTOML-experiment is completed:
+
+![image](https://user-images.githubusercontent.com/81966908/116792824-5e28aa00-aac3-11eb-944f-ffcf94654270.png)
+![image](https://user-images.githubusercontent.com/81966908/116793430-0429e380-aac7-11eb-830b-4794370e8a7a.png)
+![image](https://user-images.githubusercontent.com/81966908/116792886-c11a4100-aac3-11eb-8903-4bb46d6e7e34.png)
+
+
+Best model is VotingEnsemble with Accuracy of 0.91897
+
+![image](https://user-images.githubusercontent.com/81966908/116792917-e4dd8700-aac3-11eb-8be0-3b87ce0a5813.png)
+![image](https://user-images.githubusercontent.com/81966908/116792930-fc1c7480-aac3-11eb-8664-a98d32554f43.png)
+
+
+## 2. Deployment of best model
+
+In the pictures below, we see that we have delpoyed the best model chosen from AutoML and enabled the following:
+- REST endpoint with Key-based authentification
+
+![image](https://user-images.githubusercontent.com/81966908/116793007-764cf900-aac4-11eb-8cbe-49c0dcc153ba.png)
+
+
+## 3. Enable logging
+
+This step shows that Application Insights is enabled.
+
+![image](https://user-images.githubusercontent.com/81966908/116793007-764cf900-aac4-11eb-8cbe-49c0dcc153ba.png)
+
+
+Screenshot from logs.py:
+
+![image](https://user-images.githubusercontent.com/81966908/116885704-78c86380-ac28-11eb-8e6e-253337a499bc.png)
+
+## 4. Swagger & endpoint consumption 
+
+Furthermore, we have also testet the API with swagger using sample data. Swagger is a very handy too, in oder to easily test REST-APIs. Azure provides a swagger.json file to easly test the deployed models-API.
+![image](https://user-images.githubusercontent.com/81966908/116793118-07bc6b00-aac5-11eb-9ec3-5e303e7c443d.png)
+![image](https://user-images.githubusercontent.com/81966908/116793152-39cdcd00-aac5-11eb-9eca-8c160ac69979.png)
+
+In addition to that, we have also testet the endpoint by running the endpoint.py Python-file. The result of the test can be seen as the output of the Python-Script below:
+
+![image](https://user-images.githubusercontent.com/81966908/116793248-f2940c00-aac5-11eb-9e97-ba0d611813f4.png)
+
+## 5. Publish the Pipeline
+
+Pipelines - general view
+
+![image](https://user-images.githubusercontent.com/81966908/116793319-6cc49080-aac6-11eb-98dc-4f21cea7c583.png)
+
+
+Pipeline - Endpoints 
+
+![image](https://user-images.githubusercontent.com/81966908/116793390-d2b11800-aac6-11eb-8e85-f34aca41da39.png)
+
+Pipeline - REST-endpoint
+![image](https://user-images.githubusercontent.com/81966908/117018550-e215a880-acf4-11eb-85b4-0c75c23f985d.png)
+
+Pipleine - Completet status of Pipeline
+![image](https://user-images.githubusercontent.com/81966908/117018656-ffe30d80-acf4-11eb-959a-66b70b1d1758.png)
+
+
+Pipelines - overview showing:
+  - general info
+  - REST-Endpoint
+  - interaction AutoML and dataset
+
+![image](https://user-images.githubusercontent.com/81966908/116793490-523ee700-aac7-11eb-87f4-addd81fdf7f5.png)
+
+Screenshot of RunDetails widgets
+
+![image](https://user-images.githubusercontent.com/81966908/116887413-926aaa80-ac2a-11eb-9646-41b43f6b3838.png)
+
+Jupyter - published pipline
+
+![image](https://user-images.githubusercontent.com/81966908/116887637-cfcf3800-ac2a-11eb-8863-35311a096bb3.png)
+
+Jupyter - Pipelineendpoint test succesfull
+
+![image](https://user-images.githubusercontent.com/81966908/117019360-9fa09b80-acf5-11eb-9ef5-1f08ccb15f2d.png)
+
+testing endpoint with pyhton endpoint.py file -> successfull
+![image](https://user-images.githubusercontent.com/81966908/117020109-6b79aa80-acf6-11eb-851b-de4a2f62360b.png)
+
+
+
+Jupyter - Modeldetails
+![image](https://user-images.githubusercontent.com/81966908/116888138-656ac780-ac2b-11eb-9023-58b0d7b582a8.png)
+
+
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+https://youtu.be/RA1q-109xOU
+
+## Suggestions for Improvement
+
+1. I would use a longer compute-period/time-frame to get a higher accuracy and give the AutoMLarlgorithms more time to fine tune the results
+2. I would also enable the Deep Learning funtionality, to try out NN-based algorithms (requires GPU enabled compute-resource)
+3. I would also try to get a bigger dataset or maybe amend the dataset, since I think it might be biased, given that there are many differnt Columns/features, which could lead to unbalanced sub-groups
