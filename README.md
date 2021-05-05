@@ -96,14 +96,27 @@ and in Azure
 
 
 
-
-
-
-
-
 ## 4. Swagger & endpoint consumption 
 
-Furthermore, we have also testet the API with swagger using sample data. Swagger is a very handy too, in oder to easily test REST-APIs. Azure provides a swagger.json file to easly test the deployed models-API.
+We also tested the API with Swagger using sample data. 
+Swagger is also a very practical tool to easily test REST APIs. Azure provides a swagger.json file to easily test the provided models API and to address the trained models via a program.
+
+This is the web interface of swagger, with "connect" to the jason file from the model
+
+![image](https://user-images.githubusercontent.com/41972011/117185368-0d25f800-adda-11eb-8a80-c5107106da37.png)
+
+and here is a example for communication with the model
+
+![image](https://user-images.githubusercontent.com/41972011/117185420-1c0caa80-adda-11eb-8372-f89a7f6b393e.png)
+
+
+Final in this step, we are testing the enpoint.py Python programm the coummincation.
+
+![image](https://user-images.githubusercontent.com/41972011/117185603-4e1e0c80-adda-11eb-9336-82695084f1fe.png)
+
+
+
+
 
 In addition to that, we have also testet the endpoint by running the endpoint.py Python-file. The result of the test can be seen as the output of the Python-Script below:
 
