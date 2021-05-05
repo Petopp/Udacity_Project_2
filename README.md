@@ -110,15 +110,10 @@ and here is a example for communication with the model
 ![image](https://user-images.githubusercontent.com/41972011/117185420-1c0caa80-adda-11eb-8372-f89a7f6b393e.png)
 
 
-Final in this step, we are testing the enpoint.py Python programm the coummincation.
+ we have also testet the endpoint by running the endpoint.py Python-file.
+ The result of the test can be seen as the output of the Python-Script below:
 
 ![image](https://user-images.githubusercontent.com/41972011/117185603-4e1e0c80-adda-11eb-9336-82695084f1fe.png)
-
-
-
-
-
-In addition to that, we have also testet the endpoint by running the endpoint.py Python-file. The result of the test can be seen as the output of the Python-Script below:
 
 
 ## 5. Publish the Pipeline
