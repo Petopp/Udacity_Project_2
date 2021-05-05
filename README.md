@@ -43,6 +43,7 @@ and here can you see the confirmation from Azure
 ## 2. AutoML - setup: 
 In the next steps we are defining the compute cluster and starting the experiment
 
+Start and configuration the experiment:
 
 ![image](https://user-images.githubusercontent.com/41972011/117183622-0a2a0800-add8-11eb-9ac9-b18e25772d81.png)
 
@@ -50,14 +51,24 @@ In the next steps we are defining the compute cluster and starting the experimen
 
 AUTOML-experiment is completed:
 
-![image](https://user-images.githubusercontent.com/41972011/117183691-2037c880-add8-11eb-8a99-654dd12624e5.png)
+![image](https://user-images.githubusercontent.com/41972011/117183939-6ee56280-add8-11eb-8633-d6594c959316.png)
+
+![image](https://user-images.githubusercontent.com/41972011/117183959-79076100-add8-11eb-8da9-d9d78f73f61f.png)
 
 
+Best model is VotingEnsemble with Accuracy of 0.92018
 
+![image](https://user-images.githubusercontent.com/41972011/117184106-a6540f00-add8-11eb-82dd-5d9f96191dc2.png)
 
+Here are graphical evaluations showing the distribution and calculations in this model.
 
+![image](https://user-images.githubusercontent.com/41972011/117184268-d4395380-add8-11eb-835b-ef9cfd3eac8e.png)
 
-Best model is VotingEnsemble with Accuracy of 0.91897
+![image](https://user-images.githubusercontent.com/41972011/117184299-dbf8f800-add8-11eb-98c5-805e1e08bf7a.png)
+
+As well as an overview of the results of other algorithms.
+
+![image](https://user-images.githubusercontent.com/41972011/117184374-f206b880-add8-11eb-8eab-1ccf79ad202f.png)
 
 
 ## 2. Deployment of best model
