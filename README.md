@@ -113,7 +113,8 @@ and here is a example for communication with the model
  we have also testet the endpoint by running the endpoint.py Python-file.
  The result of the test can be seen as the output of the Python-Script below:
 
-![image](https://user-images.githubusercontent.com/41972011/117185603-4e1e0c80-adda-11eb-9336-82695084f1fe.png)
+![image](https://user-images.githubusercontent.com/41972011/117188022-db626080-addc-11eb-8805-e2e62853976c.png)
+
 
 
 ## 5. Overview over the Pipeline (it's more FYI)
@@ -135,30 +136,51 @@ Pipeline - REST-endpoint
 ## 6. Runnig the SDK over Jupyter
 
 After upload the Jupyter programm in to Azure, can you find this on this file here:
+
 ![image](https://user-images.githubusercontent.com/41972011/117186452-211e2980-addb-11eb-8d9b-70fdcc6ddcea.png)
 
 
 Running the experiment over SDK
+
 ![image](https://user-images.githubusercontent.com/41972011/117186950-aefa1480-addb-11eb-83bb-5c433f518c36.png)
 
 ![image](https://user-images.githubusercontent.com/41972011/117186816-8114d000-addb-11eb-9376-a10f3d58ce2c.png)
 
 ![image](https://user-images.githubusercontent.com/41972011/117186860-8eca5580-addb-11eb-9525-178cfedf2ae9.png)
 
+
 Message that it is finished
+
 ![image](https://user-images.githubusercontent.com/41972011/117186616-4dd24100-addb-11eb-9ddc-507a517c2f1e.png)
 
 
+Aceess to the REST Endpoint over Jupyter:
+
+![image](https://user-images.githubusercontent.com/41972011/117187338-1a43e680-addc-11eb-91cf-90b6107e6a64.png)
+
+
+Or you can see the url to the REST API here together with the published pipeline:
+
+![image](https://user-images.githubusercontent.com/41972011/117187632-6a22ad80-addc-11eb-8e21-bfc3c3976c22.png)
+
+And a final test over python
+
+![image](https://user-images.githubusercontent.com/41972011/117187831-a35b1d80-addc-11eb-945d-30c3ceb70ed7.png)
+
+with the best algorithm 
+
+![image](https://user-images.githubusercontent.com/41972011/117188267-2c725480-addd-11eb-9df4-e86533259064.png)
 
 
 
+## Recording
+https://youtu.be/JpwZw998Xgk
 
-## Screen Recording
+## Suggestions for improvement for future experiments
+1.  I will use by repating this a longer computation period/time frame  to get higher accuracy and give the AutoML arlgorithms more time to fine-tune.
 
-https://youtu.be/RA1q-109xOU
+2.  Also enable Deep Learning functionality to try NN-based algorithms (requires GPU-capable computational resources). This could yield better results, provided that 
+    the amount of data can be increased as listed in point 3 in a moment.
 
-## Suggestions for Improvement
-
-1. I would use a longer compute-period/time-frame to get a higher accuracy and give the AutoMLarlgorithms more time to fine tune the results
-2. I would also enable the Deep Learning funtionality, to try out NN-based algorithms (requires GPU enabled compute-resource)
-3. I would also try to get a bigger dataset or maybe amend the dataset, since I think it might be biased, given that there are many differnt Columns/features, which could lead to unbalanced sub-groups
+3.  I would try to get a larger data set, possibly from other regions/countries. 
+    Since data from only one specific region could also bias the algorithm if it were to be used elsewhere.
