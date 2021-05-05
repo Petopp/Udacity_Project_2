@@ -73,9 +73,13 @@ As well as an overview of the results of other algorithms.
 
 ## 2. Deployment of best model
 
-In the pictures below, we see that we have delpoyed the best model chosen from AutoML and enabled the following:
-- REST endpoint with Key-based authentification
+Here you can see that the best model from AutoML has been selected and the authenficartion has been activated. The computer type was also set to ACI as required.
 
+![image](https://user-images.githubusercontent.com/41972011/117184434-05b21f00-add9-11eb-9f50-8f5cace9737b.png)
+
+Here is the status that the model now has
+
+![image](https://user-images.githubusercontent.com/41972011/117184699-4ca01480-add9-11eb-983a-a3b2c0031fa6.png)
 
 
 ## 3. Enable logging
