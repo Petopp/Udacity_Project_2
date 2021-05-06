@@ -93,23 +93,26 @@ and in Azure
 ### 4. Swagger & endpoint consumption 
 
 We also tested the API with Swagger using sample data. 
-Swagger is also a very practical tool to easily test REST APIs. Azure provides a swagger.json file to easily test the provided models API and to address the trained models via a program.
+Swagger is also a very practical tool to easily test REST APIs. 
+Azure provides a swagger.json file to easily test the provided models API and to address the trained models via a program.
 
-This is the web interface of swagger, with "connect" to the jason file from the model
+This is the web interface of swagger, with "connect" to the JSON file from the model
 
 <kbd>![image](https://user-images.githubusercontent.com/41972011/117185368-0d25f800-adda-11eb-8a80-c5107106da37.png)</kbd>
 
-and here is a example for communication with the model
+and here is a example for communication with the model over JSON
 
 <kbd>![image](https://user-images.githubusercontent.com/41972011/117185420-1c0caa80-adda-11eb-8372-f89a7f6b393e.png)</kbd>
 
- we have also testet the endpoint by running the endpoint.py Python-file.
+ we have also testet the endpoint by running the endpoint.py Python-file. 
+ 
  The result of the test can be seen as the output of the Python-Script below:
 
 <kbd>![image](https://user-images.githubusercontent.com/41972011/117188022-db626080-addc-11eb-8805-e2e62853976c.png)</kbd>
 
+The feedback corresponds to what was specified as the target parameters. This experiment has thus been successfully tested and verified.
 
-### 5. Overview over the Pipeline (it's more FYI)
+### 5. Overview over the Pipeline
 
 Pipelines - general view
 
@@ -129,7 +132,7 @@ After upload the Jupyter programm in to Azure, can you find this on this file he
 
 <kbd>![image](https://user-images.githubusercontent.com/41972011/117186452-211e2980-addb-11eb-8d9b-70fdcc6ddcea.png)</kbd>
 
-Running the experiment over SDK
+Running the experiment over SDK in a Juypter Notebook.
 
 <kbd>![image](https://user-images.githubusercontent.com/41972011/117329455-f1cbf300-ae94-11eb-930f-d69989d6445c.png)</kbd>
 
@@ -137,7 +140,7 @@ Running the experiment over SDK
 
 <kbd>![image](https://user-images.githubusercontent.com/41972011/117186860-8eca5580-addb-11eb-9525-178cfedf2ae9.png)</kbd>
 
-Message that it is finished
+Message that it is finished the experiment over the SDK
 
 <kbd>![image](https://user-images.githubusercontent.com/41972011/117186616-4dd24100-addb-11eb-9ddc-507a517c2f1e.png)</kbd>
 
